@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 
 import HorizonFrameLogo from "./components/horizon-frame-logo";
 
@@ -23,8 +24,13 @@ export default function Page() {
   }
   return (
     <>
-      <header className="w-full py-4 px-6 bg-black text-white">
+      <header className="w-full py-4 px-6 bg-black text-white flex items-center justify-between">
         <h1 className="text-xl font-bold">HorizonFrame</h1>
+        <nav>
+          <Link href="/support" className="text-white hover:text-gray-300">
+            Support
+          </Link>
+        </nav>
       </header>
 
       <main className="flex-1">
