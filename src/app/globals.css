@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #000000;
+  --background: #0a0a0f;
   --foreground: #ffffff;
+  --aurora-primary: rgba(0, 200, 150, 0.5);
+  --aurora-secondary: rgba(147, 51, 234, 0.5);
+  --aurora-tertiary: rgba(0, 102, 255, 0.4);
+  --glow-color: rgba(0, 255, 200, 0.15);
 }
 
 @theme inline {
@@ -14,7 +18,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #000000;
+    --background: #0a0a0f;
     --foreground: #ededed;
   }
 }
@@ -23,4 +27,124 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Enhanced Background */
+.bg-obsidian {
+  background-color: var(--background);
+  background-image: radial-gradient(circle at 50% 50%, #12121a, #0a0a0f 70%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+}
+
+/* Enhanced Aurora Wave Animation */
+.aurora-wave-1 {
+  background: linear-gradient(45deg, transparent, var(--aurora-primary), transparent);
+  background-size: 400% 400%;
+  animation: auroraFlow 30s ease infinite;
+  border-radius: 50%;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  position: absolute;
+  filter: blur(30px);
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
+.aurora-wave-2 {
+  background: linear-gradient(135deg, transparent, var(--aurora-secondary), transparent);
+  background-size: 400% 400%;
+  animation: auroraFlow 25s ease infinite reverse;
+  border-radius: 50%;
+  width: 180%;
+  height: 180%;
+  top: -40%;
+  right: -40%;
+  position: absolute;
+  filter: blur(30px);
+  opacity: 0.4;
+  mix-blend-mode: screen;
+}
+
+.aurora-wave-3 {
+  background: linear-gradient(225deg, transparent, var(--aurora-tertiary), transparent);
+  background-size: 300% 300%;
+  animation: auroraFlow 40s ease infinite;
+  border-radius: 50%;
+  width: 150%;
+  height: 150%;
+  bottom: -25%;
+  left: -25%;
+  position: absolute;
+  filter: blur(25px);
+  opacity: 0.3;
+  mix-blend-mode: screen;
+}
+
+/* Star Field Effect */
+.star-field {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0;
+  animation: twinkle var(--duration) ease-in-out infinite;
+  animation-delay: var(--delay);
+}
+
+@keyframes auroraFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes twinkle {
+  0% { opacity: 0; }
+  50% { opacity: var(--brightness); }
+  100% { opacity: 0; }
+}
+
+/* Glow Effects */
+.glow-text {
+  text-shadow: 0 0 10px var(--glow-color), 0 0 20px var(--glow-color);
+}
+
+.glow-border {
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* Parallax Effect */
+.parallax {
+  transition: transform 0.1s ease-out;
+}
+
+.parallax-slow {
+  transition: transform 0.2s ease-out;
+}
+
+.parallax-slower {
+  transition: transform 0.3s ease-out;
 }
