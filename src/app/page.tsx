@@ -1,10 +1,9 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 import HorizonFrameLogo from "./components/horizon-frame-logo";
 import BottomEmailForm from "./components/bottom-email-form";
-import BackgroundEffects from "./components/background-effects";
 
 export default function Page() {
   const [email, setEmail] = useState("");
@@ -92,11 +91,10 @@ export default function Page() {
   }
   return (
     <>
-      <BackgroundEffects />
-      <header className="w-full py-4 px-6 bg-transparent text-white flex items-center justify-between relative z-10">
+      <header className="w-full py-4 px-6 bg-gray-900 text-white flex items-center justify-between">
         <div className="flex items-center">
           <HorizonFrameLogo className="mr-4" />
-          <h1 className="text-xl font-bold pl-2 glow-text">HorizonFrame</h1>
+          <h1 className="text-xl font-bold pl-2">HorizonFrame</h1>
         </div>
         <nav>
           <Link href="/support" className="text-white hover:text-gray-300">
@@ -112,10 +110,9 @@ export default function Page() {
           className="flex flex-col md:flex-row min-h-screen relative overflow-hidden"
         >
           {/* Aurora background effect */}
-          <div className="absolute inset-0 bg-transparent z-0 overflow-hidden">
-            <div className="absolute inset-0 aurora-wave-1 parallax-slower"></div>
-            <div className="absolute inset-0 aurora-wave-2 parallax-slow"></div>
-            <div className="absolute inset-0 aurora-wave-3 parallax"></div>
+          <div className="absolute inset-0 bg-gray-900 z-0 overflow-hidden">
+            <div className="absolute inset-0 aurora-wave-1 opacity-20"></div>
+            <div className="absolute inset-0 aurora-wave-2 opacity-20"></div>
           </div>
           {/* Left half: main screenshot in iPhone frame */}
           <div className="flex-1 flex flex-col items-center justify-center bg-transparent p-6 z-10">
@@ -267,13 +264,13 @@ export default function Page() {
             <div className="absolute inset-0 aurora-wave-1 opacity-20"></div>
             <div className="absolute inset-0 aurora-wave-2 opacity-20"></div>
           </div>
-          <h2 className="text-3xl font-bold text-center mb-12 glow-text">Get Started in Minutes</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Get Started in Minutes</h2>
           <p className="text-center text-lg text-gray-300 max-w-2xl mx-auto mb-10">
             Our intuitive onboarding process helps you set up your frame, capture your first insights, and align with your vision.
           </p>
           <div className="flex flex-wrap justify-center gap-8 max-w-5xl mx-auto">
             <div className="flex flex-col items-center w-[280px] mb-6">
-              <div className="relative w-[280px] h-[580px] bg-black rounded-[40px] p-2 border-4 border-gray-800 overflow-hidden shadow-lg transform rotate-1 glow-border">
+              <div className="relative w-[280px] h-[580px] bg-black rounded-[40px] p-2 border-4 border-gray-800 overflow-hidden shadow-lg transform rotate-1">
                 <div className="absolute top-0 left-0 w-full h-6 bg-black"></div>
                 <img
                   src="/Screenshots/Onboarding 1 -Simulator Screenshot - iPhone 16 Pro Max - 2025-07-14 at 15.07.49.png"
@@ -284,7 +281,7 @@ export default function Page() {
               <p className="mt-4 text-sm text-gray-400">Step 1: Welcome</p>
             </div>
             <div className="flex flex-col items-center w-[280px] mb-6">
-              <div className="relative w-[280px] h-[580px] bg-black rounded-[40px] p-2 border-4 border-gray-800 overflow-hidden shadow-lg transform -rotate-1 glow-border">
+              <div className="relative w-[280px] h-[580px] bg-black rounded-[40px] p-2 border-4 border-gray-800 overflow-hidden shadow-lg transform -rotate-1">
                 <div className="absolute top-0 left-0 w-full h-6 bg-black"></div>
                 <img
                   src="/Screenshots/Onboarding 2 - Simulator Screenshot - iPhone 16 Pro Max - 2025-07-14 at 15.07.52.png"
@@ -295,7 +292,7 @@ export default function Page() {
               <p className="mt-4 text-sm text-gray-400">Step 2: Set Your Frame</p>
             </div>
             <div className="flex flex-col items-center w-[280px] mb-6">
-              <div className="relative w-[280px] h-[580px] bg-black rounded-[40px] p-2 border-4 border-gray-800 overflow-hidden shadow-lg transform rotate-2 glow-border">
+              <div className="relative w-[280px] h-[580px] bg-black rounded-[40px] p-2 border-4 border-gray-800 overflow-hidden shadow-lg transform rotate-2">
                 <div className="absolute top-0 left-0 w-full h-6 bg-black"></div>
                 <img
                   src="/Screenshots/Onboarding 3 - Simulator Screenshot - iPhone 16 Pro Max - 2025-07-14 at 15.07.55.png"
@@ -315,14 +312,13 @@ export default function Page() {
         >
           {/* Background with z-index control */}
           <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1 }}>
-            <div className="absolute inset-0 aurora-wave-1 parallax-slower"></div>
-            <div className="absolute inset-0 aurora-wave-2 parallax-slow"></div>
-            <div className="absolute inset-0 aurora-wave-3 parallax"></div>
+            <div className="absolute inset-0 aurora-wave-1 opacity-20"></div>
+            <div className="absolute inset-0 aurora-wave-2 opacity-20"></div>
           </div>
           
           {/* Content with higher z-index */}
           <div className="max-w-3xl mx-auto text-center" style={{ position: 'relative', zIndex: 10 }}>
-            <h2 className="text-3xl font-bold mb-6 glow-text">Be Among the First to Transform Your Perspective</h2>
+            <h2 className="text-3xl font-bold mb-6">Be Among the First to Transform Your Perspective</h2>
             <p className="text-lg text-gray-300 mb-6">
               Join our waitlist today and get <span className="font-semibold text-teal-400">20% off your first subscription</span> when HorizonFrame launches.
             </p>
@@ -333,7 +329,7 @@ export default function Page() {
         </section>
       </main>
 
-      <footer className="w-full py-4 px-6 bg-transparent text-center text-sm text-gray-500 relative z-10">
+      <footer className="w-full py-4 px-6 bg-gray-900 text-center text-sm text-gray-500">
         &copy; {new Date().getFullYear()} HorizonFrame. All rights reserved.
       </footer>
     </>

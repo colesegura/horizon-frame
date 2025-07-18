@@ -1,6 +1,6 @@
 export default function HorizonFrameLogo(props) {
     return (
-        <svg width="321" height="321" viewBox="0 0 321 321" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="16" height="16" viewBox="0 0 321 321" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect y="242.645" width="10.272" height="78.3543" rx="5.136" fill="white"/>
             <rect y="1.26172" width="10.272" height="78.3543" rx="5.136" fill="white"/>
             <rect y="10.1094" width="10.1102" height="79.608" rx="5.05512" transform="rotate(-90 0 10.1094)" fill="white"/>
