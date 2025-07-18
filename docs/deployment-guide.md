@@ -48,9 +48,24 @@ Then access it at http://localhost:8000 in your browser.
 ### 3. Deploy via Coolify Dashboard
 
 1. Log in to the Coolify dashboard
-2. Find the HorizonFrame project
-3. Click on "Redeploy" or "Deploy"
-4. Wait for the deployment to complete
+2. Find the HorizonFrame project in the list of applications
+3. Click on the project to view its details
+4. Click on the "Redeploy" or "Deploy" button in the top-right corner
+5. Monitor the deployment progress in the deployment logs section:
+   - The deployment process typically takes 2-5 minutes to complete
+   - You'll see real-time logs showing the build and deployment progress
+   - Look for a green success message at the end indicating the deployment is complete
+6. Once complete, click on the URL link to view the deployed website
+
+**Troubleshooting Coolify Deployments:**
+
+- If the deployment fails, check the logs for error messages
+- Common issues include:
+  - Build failures due to linting errors (use `--no-lint` in your build command)
+  - Memory limitations on the server
+  - Network connectivity issues
+- If the deployment seems stuck, wait at least 5 minutes before attempting to cancel and retry
+- If you encounter a 504 Gateway Timeout error, try refreshing the page or using the manual deployment method
 
 ### 4. Alternative: Manual Deployment (if Coolify Dashboard is unavailable)
 
