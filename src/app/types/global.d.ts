@@ -6,7 +6,7 @@ interface Window {
     params?: {
       event_category?: string;
       event_label?: string;
-      [key: string]: any;
+      [key: string]: string | number | boolean | undefined;
     }
   ) => void;
 }

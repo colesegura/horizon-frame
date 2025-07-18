@@ -7,9 +7,8 @@ import BottomEmailForm from "./components/bottom-email-form";
 
 export default function Page() {
   const [email, setEmail] = useState("");
-  const [bottomEmail, setBottomEmail] = useState("");
   const [status, setStatus] = useState<"idle"|"loading"|"success"|"error">("idle");
-  const [bottomStatus, setBottomStatus] = useState<"idle"|"loading"|"success"|"error">("idle");
+  // Bottom form is now handled by the BottomEmailForm component
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setStatus("loading");
@@ -50,45 +49,7 @@ export default function Page() {
     }
   }
   
-  async function handleBottomSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setBottomStatus("loading");
-    try {
-      const res = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ 
-          email: bottomEmail,
-          source: "website",
-          location: "bottom_section" 
-        }),
-      });
-      
-      const data = await res.json();
-      
-      if (data.success) {
-        setBottomStatus("success");
-        setBottomEmail("");
-        // Track conversion if you have analytics
-        if (typeof window !== 'undefined' && window.gtag) {
-          window.gtag('event', 'signup', {
-            'event_category': 'engagement',
-            'event_label': 'bottom_section'
-          });
-        }
-      } else if (data.error) {
-        console.error("Subscription error:", data);
-        setBottomStatus("error");
-      } else {
-        // Unexpected response format
-        console.error("Unexpected API response:", data);
-        setBottomStatus("error");
-      }
-    } catch (error) {
-      console.error("Subscription error:", error);
-      setBottomStatus("error");
-    }
-  }
+  // Bottom form submission is now handled by the BottomEmailForm component
   return (
     <>
       <header className="w-full py-4 px-6 bg-gray-900 text-white flex items-center justify-between">
@@ -329,8 +290,17 @@ export default function Page() {
         </section>
       </main>
 
-      <footer className="w-full py-4 px-6 bg-gray-900 text-center text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} HorizonFrame. All rights reserved.
+      <footer className="w-full py-4 px-6 bg-gray-900 text-sm text-gray-500">
+        <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+          <div>
+            &copy; {new Date().getFullYear()} HorizonFrame. All rights reserved.
+          </div>
+          <div className="mt-2 md:mt-0 flex space-x-4">
+            <Link href="/privacy" className="text-gray-400 hover:text-gray-300">Privacy Policy</Link>
+            <Link href="/terms" className="text-gray-400 hover:text-gray-300">Terms of Service</Link>
+            <Link href="/support" className="text-gray-400 hover:text-gray-300">Support</Link>
+          </div>
+        </div>
       </footer>
     </>
   );

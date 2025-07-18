@@ -104,7 +104,7 @@ export default function BottomEmailForm() {
       
       {status === "success" && (
         <p className="mt-2 text-sm text-teal-400 text-center">
-          You'll be among the first to know when HorizonFrame launches and receive your 20% discount!  
+          You&apos;ll be among the first to know when HorizonFrame launches and receive your 20% discount!  
         </p>
       )}
     </div>

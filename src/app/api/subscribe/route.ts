@@ -70,7 +70,7 @@ export async function POST(request: Request) {
       try {
         errorData = JSON.parse(errorText);
         console.error('Brevo API error response:', errorData);
-      } catch (e) {
+      } catch (_error) {
         console.error('Non-JSON error response from Brevo API:', errorText);
         errorData = { message: 'Invalid response from email service' };
       }
@@ -108,7 +108,7 @@ export async function POST(request: Request) {
           
           try {
             updateErr = JSON.parse(updateErrText);
-          } catch (e) {
+          } catch (_error) {
             updateErr = { message: updateErrText || 'Error updating contact' };
           }
           

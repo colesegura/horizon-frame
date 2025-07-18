@@ -23,7 +23,8 @@ cd /Users/colesegura/Code/horizon-frame
 # Install dependencies
 npm install
 
-# Build the application (with linting disabled if necessary)
+# Build the application WITH THE --no-lint FLAG (IMPORTANT)
+# The application will fail to build without this flag due to linting issues
 npx next build --no-lint
 ```
 
