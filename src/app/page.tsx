@@ -130,13 +130,14 @@ export default function Page() {
                 </p>
               </div>
               <div className="mt-6">
-                <button
+                <a
+                  href="https://apps.apple.com/us/app/horizonframe/id6748653335"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3 rounded-md bg-white text-black font-semibold hover:bg-gray-100 transition-colors"
-                  onClick={() => window.location.href = "#download"}
                 >
                   Download Now
-                </button>
-                <p className="mt-1 text-xs text-gray-400">Coming soon to the App Store</p>
+                </a>
               </div>
             </div>
           </div>
