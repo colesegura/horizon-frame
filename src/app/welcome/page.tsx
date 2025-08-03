@@ -73,7 +73,7 @@ export default function Welcome() {
   }
   
   return (
-    <div className="relative flex flex-col h-screen w-full overflow-hidden bg-gradient-to-br from-gray-900 to-black">
+    <div className="relative flex flex-col min-h-screen w-full overflow-x-hidden overflow-y-auto bg-gradient-to-br from-gray-900 to-black">
       {/* Aurora waves in background */}
       <div className="fixed inset-0 overflow-hidden z-0">
         <div className="aurora-wave-1"></div>
@@ -88,12 +88,12 @@ export default function Welcome() {
       </header>
       
       {/* Main content area with flex layout */}
-      <main className="flex-1 flex items-center relative z-10 container mx-auto px-4">
+      <main className="flex-1 flex items-start md:items-center relative z-10 container mx-auto px-4 py-8 md:py-0">
         <div className="flex flex-col md:flex-row w-full">
           {/* Left side - Giant phone mockup */}
           <div className="md:w-3/5 relative">
             {/* Mobile-first design with larger image on small screens */}
-            <div className="w-[120%] mx-auto mb-8 md:mb-0 md:absolute md:left-[-25%] md:bottom-[-15%] md:w-[150%]">
+            <div className="w-[130%] relative left-[-15%] mb-8 md:mb-0 md:absolute md:left-[-25%] md:bottom-[-15%] md:w-[150%]">
               <img 
                 src="/Screenshots/RotatoProgressPage.png" 
                 alt="HorizonFrame App Mockup" 
