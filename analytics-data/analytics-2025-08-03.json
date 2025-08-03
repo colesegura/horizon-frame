@@ -1,0 +1,107 @@
+{
+  "events": [
+    {
+      "eventType": "page_view",
+      "timestamp": 1754240506419,
+      "page": "/welcome"
+    },
+    {
+      "eventType": "page_view",
+      "timestamp": 1754240506419,
+      "page": "/welcome"
+    },
+    {
+      "eventType": "form_focus",
+      "timestamp": 1754240537567,
+      "page": "/welcome",
+      "element": "email-input"
+    },
+    {
+      "eventType": "form_focus",
+      "timestamp": 1754240543347,
+      "page": "/welcome",
+      "element": "email-input"
+    },
+    {
+      "eventType": "form_focus",
+      "timestamp": 1754240543355,
+      "page": "/welcome",
+      "element": "email-input"
+    },
+    {
+      "eventType": "form_submit",
+      "timestamp": 1754240544084,
+      "page": "/welcome",
+      "email": "localhost.hug714@passinbox.com"
+    },
+    {
+      "eventType": "form_submit",
+      "timestamp": 1754240544086,
+      "page": "/welcome",
+      "email": "localhost.hug714@passinbox.com"
+    },
+    {
+      "eventType": "signup_success",
+      "timestamp": 1754240545275,
+      "page": "/welcome",
+      "email": "localhost.hug714@passinbox.com",
+      "source": "welcome_page"
+    },
+    {
+      "eventType": "form_focus",
+      "timestamp": 1754240820893,
+      "page": "/welcome",
+      "element": "email-input"
+    },
+    {
+      "eventType": "form_focus",
+      "timestamp": 1754240827728,
+      "page": "/welcome",
+      "element": "email-input"
+    },
+    {
+      "eventType": "form_focus",
+      "timestamp": 1754240827753,
+      "page": "/welcome",
+      "element": "email-input"
+    },
+    {
+      "eventType": "form_submit",
+      "timestamp": 1754240830254,
+      "page": "/welcome",
+      "email": "localhost.gaming630@passinbox.com"
+    },
+    {
+      "eventType": "form_submit",
+      "timestamp": 1754240830254,
+      "page": "/welcome",
+      "email": "localhost.gaming630@passinbox.com"
+    },
+    {
+      "eventType": "signup_success",
+      "timestamp": 1754240831269,
+      "page": "/welcome",
+      "email": "localhost.gaming630@passinbox.com",
+      "source": "welcome_page"
+    }
+  ],
+  "summaries": [
+    {
+      "pageViews": {
+        "/welcome": 2
+      },
+      "conversionRates": {
+        "/welcome": 50
+      }
+    },
+    {
+      "pageViews": {
+        "/welcome": 2
+      },
+      "conversionRates": {
+        "/welcome": 100
+      }
+    }
+  ],
+  "lastUpdated": 1754240867100
+}
