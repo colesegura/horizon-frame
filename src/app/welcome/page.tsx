@@ -89,11 +89,11 @@ export default function Welcome() {
       
       {/* Main content area with flex layout */}
       <main className="flex-1 flex items-start md:items-center relative z-10 container mx-auto px-4 py-8 md:py-0">
-        <div className="flex flex-col md:flex-row w-full">
+        <div className="flex flex-col lg:flex-row w-full">
           {/* Left side - Giant phone mockup */}
-          <div className="md:w-3/5 relative">
-            {/* Mobile-first design with larger image on small screens */}
-            <div className="w-[130%] relative left-[-15%] mb-8 md:mb-0 md:absolute md:left-[-25%] md:bottom-[-15%] md:w-[150%]">
+          <div className="w-full lg:w-1/2 relative mb-8 lg:mb-0">
+            {/* Responsive design with proper image positioning at all screen sizes */}
+            <div className="w-[110%] sm:w-[150%] md:w-[170%] relative left-[-5%] sm:left-[-15%] md:left-[-20%] mx-auto max-w-md lg:max-w-none">
               <img 
                 src="/Screenshots/RotatoProgressPage.png" 
                 alt="HorizonFrame App Mockup" 
@@ -103,7 +103,7 @@ export default function Welcome() {
           </div>
           
           {/* Right side - Text content */}
-          <div className="md:w-2/5 z-10 md:pl-8">
+          <div className="w-full lg:w-1/2 z-10 lg:pl-8">
             <div>
               <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Visualize your dream life, <br /> Act on it now.
